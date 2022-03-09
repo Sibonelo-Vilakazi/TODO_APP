@@ -6,3 +6,15 @@ body,html{
     box-sizing: border-box;
     margin: $zero-padding;
 }
+
+.btn-submit{
+    background: $primary-color;
+    color: $white-color;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 100%;
+    border-radius: $border-radius12;
+}

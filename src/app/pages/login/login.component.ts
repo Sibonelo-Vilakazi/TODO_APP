@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class LoginComponent implements OnInit {
 
   constructor() { }
-
+  showPassword : boolean = false;
   ngOnInit(): void {
   }
 
+  handlePasswordVisibility(){
+    this.showPassword = !this.showPassword;
+  }
 }

@@ -1,0 +1,76 @@
+@import '/src/themes/themes.scss';
+
+.register-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    img{
+        width : 187px;
+        height: 180px;
+        margin-top : 50px;
+        margin-bottom: 40px;
+        
+    }
+
+    .form-section{
+        display: flex;
+        flex-direction: column;
+        padding: $zero-padding $padding24;
+        box-sizing: border-box;
+        width: 100%;
+        input, .password-box> input{
+            width:100%;
+            height : 48px;
+            margin-bottom: $padding16;
+            border-radius: $border-radius12;
+            outline: none;
+            border : 1px solid $secondary-color;
+            padding-left: $padding16 ;
+            box-sizing: border-box;
+            &::placeholder{
+                font-size: $font-size16;
+    
+            }
+        }
+
+        .password-box{
+            position: relative;
+            img{
+                width: 24px;
+                height: 24px;
+                margin:$zero-padding;
+                position: absolute;
+                right: 5%;
+                top: 50%;
+                bottom: 0%;
+                transform: translateY(-50%);
+            }
+            input{
+                margin-bottom: $zero-padding;
+                
+            }
+        }
+
+        .confirm-box{
+            margin-top: $padding16;
+            margin-bottom: $padding24;
+        }
+        .has-account{
+            color: $secondary-color;
+            font-size:  $font-size12;
+            position: relative;
+            text-align: right;
+            margin-top: 15px;
+            margin-bottom: $padding16;
+        }
+
+        .has-account{
+            text-align: center;
+            span{
+                color: $primary-color;
+            }
+        }
+    }
+}

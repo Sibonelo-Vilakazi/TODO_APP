@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div class="login-container">
+    <img src="../../../assets/logo.svg" alt="todo logo">
+
+    <div class="form-section">
+        <input type="text" placeholder="Email">
+        <div class="password-box">
+            <input [type]="!showPassword ? 'password' : 'text'" placeholder="Password">
+            <img (click)="handlePasswordVisibility()" *ngIf="!showPassword" src="../../../assets/eye-off.svg" alt="hide password icon">
+            <img (click)="handlePasswordVisibility()" *ngIf="showPassword" src="../../../assets/eye-svgrepo-com.svg" alt="hide password icon">
+        </div>
+        <label class="forgot-password">Forgot Password?</label>
+        <div class="btn-submit">
+            Sign in
+        </div>
+        <label class="no-password">Don't have an account? <span>Sign up</span></label>
+    </div>
+    
+</div>
