@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterComponent implements OnInit {
   showPassword : boolean = false;
   showConfirmPassword : boolean = false
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
   }
@@ -19,5 +20,8 @@ export class RegisterComponent implements OnInit {
 
   handleConfirmPasswordVisibility(){
     this.showConfirmPassword = ! this.showConfirmPassword;
+  }
+  redirectToLogin(){
+      this.router.navigateByUrl('login')
   }
 }

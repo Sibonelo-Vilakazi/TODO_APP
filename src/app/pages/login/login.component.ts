@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -7,12 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router : Router) { }
   showPassword : boolean = false;
   ngOnInit(): void {
   }
 
   handlePasswordVisibility(){
     this.showPassword = !this.showPassword;
+  }
+
+  redirectToRegister(){
+      this.router.navigateByUrl('register')
   }
 }
