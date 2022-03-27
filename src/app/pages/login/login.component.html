@@ -9,7 +9,7 @@
             <img (click)="handlePasswordVisibility()" *ngIf="showPassword" src="../../../assets/eye-svgrepo-com.svg" alt="hide password icon">
         </div>
         <label class="forgot-password">Forgot Password?</label>
-        <div class="btn-submit">
+        <div (click) ="loginSubmit()" class="btn-submit">
             Sign in
         </div>
         <label class="no-password">Don't have an account? <span (click)="redirectToRegister()">Sign up</span></label>

@@ -20,4 +20,8 @@ export class LoginComponent implements OnInit {
   redirectToRegister(){
       this.router.navigateByUrl('register')
   }
+
+  loginSubmit(){
+    this.router.navigateByUrl('')
+  }
 }
