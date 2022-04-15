@@ -17,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     RegisterComponent,
     HomeComponent,
     TodoCardComponent,
-    AddEditComponent
+    AddEditComponent,
+  
   ],
   imports: [
     BrowserModule,
