@@ -1,0 +1,13 @@
+<div *ngIf="showNavBar()" class="navbar-container">
+    <div class="left-section">
+        <img [routerLink]="'/'" src="../../../assets/chevron-left.svg" alt="chevron left icon">
+        <p class="header">TODO LIST</p>
+
+    </div>
+    <div class="right-section">
+        <img  src="../../../assets/clock2.svg" alt="clock icon">
+        <img *ngIf="showEdit()" src="../../../assets/edit-2.svg" alt="edit icon">
+        <img *ngIf="showDelete()" src="../../../assets/trash-2.svg" alt="trash icon">
+        <img *ngIf="showSettings()" [routerLink]="'/profile'" src="../../../assets/settings.svg" alt="setting icon">
+    </div>
+</div>

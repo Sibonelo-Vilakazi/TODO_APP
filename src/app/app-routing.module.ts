@@ -1,3 +1,4 @@
+import { ProfileComponent } from './pages/profile/profile.component';
 import { AddEditComponent } from './pages/add-edit/add-edit.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RegisterComponent } from './pages/register/register.component';
@@ -20,6 +21,9 @@ const routes: Routes = [
   },
   {
     path: 'edit/:id', component: AddEditComponent
+  },
+  {
+    path : 'profile', component : ProfileComponent
   }
 ];
 

@@ -1,0 +1,23 @@
+<div class="profile-container">
+
+    <img src="../../../assets/profile_image.png" alt="profile image">
+
+    <div class="profile-info-section">
+        <div class="info-strip">
+            <p class="header">Full Name</p>
+            <p class="detail">{{userData?.name +" " + userData?.surname}}</p>
+        </div>
+        <div class="info-strip">
+            <p class="header">Email</p>
+            <p class="detail">{{userData?.email}}</p>
+        </div>
+        <div class="info-strip">
+            <p class="header">Password</p>
+            <p class="password-link">Change Password</p>
+        </div>
+    </div>
+
+    <div (click)="logout()" class="btn-submit">
+        LOG OUT
+    </div>
+</div>

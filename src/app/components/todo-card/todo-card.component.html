@@ -1,4 +1,4 @@
-<div [ngClass]="{'lightColor' : todoCount % 2 !=0 , 'darkColor' : todoCount % 2 == 0  }" class="todo-card-container">
+<div (click)="redirectToEdit()" [ngClass]="{'lightColor' : todoCount % 2 !=0 , 'darkColor' : todoCount % 2 == 0  }" class="todo-card-container">
     <div class="header-section">
         <p class="title">{{todo?.title}}</p>
         <img src="../../../assets/clock.png" alt="clock icon">

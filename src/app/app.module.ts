@@ -1,3 +1,4 @@
+import { NavbarComponent } from './components/navbar/navbar.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,6 +11,7 @@ import { TodoCardComponent } from './components/todo-card/todo-card.component';
 import {HttpClientModule } from '@angular/common/http';
 import { AddEditComponent } from './pages/add-edit/add-edit.component';
 import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     TodoCardComponent,
     AddEditComponent,
+    NavbarComponent
   
   ],
   imports: [
