@@ -1,23 +1,24 @@
 <div class="register-container">
     <img src="../../../assets/logo.svg" alt="todo logo">
 
-    <div class="form-section">
-        <input type="text" placeholder="Email">
+    <div [formGroup]="registerForm" class="form-section">
+        <input formControlName="username" type="text" placeholder="Email">
 
-        <input type="text" placeholder="Full Name">
+        <!-- <input formControlName="username" type="text" placeholder="Full Name"> -->
         <div class="password-box">
-            <input [type]="!showPassword ? 'password' : 'text'" placeholder="Password">
+            <input formControlName="password"  [type]="!showPassword ? 'password' : 'text'" placeholder="Password">
             <img (click)="handlePasswordVisibility()" *ngIf="!showPassword" src="../../../assets/eye-off.svg" alt="hide password icon">
             <img (click)="handlePasswordVisibility()" *ngIf="showPassword" src="../../../assets/eye-svgrepo-com.svg" alt="hide password icon">
         </div>
         <div class="password-box confirm-box">
-            <input [type]="!showConfirmPassword ? 'password' : 'text'" placeholder="Confirm Password">
+            <input formControlName="confirmPassword" [type]="!showConfirmPassword ? 'password' : 'text'" placeholder="Confirm Password">
             <img (click)="handleConfirmPasswordVisibility()" *ngIf="!showConfirmPassword" src="../../../assets/eye-off.svg" alt="hide password icon">
             <img (click)="handleConfirmPasswordVisibility()" *ngIf="showConfirmPassword" src="../../../assets/eye-svgrepo-com.svg" alt="hide password icon">
         </div>
-        <div class="btn-submit">
-            Sign in
-        </div>
+        <label class="errorMessage" *ngIf="errorMessage" >{{errorMessage}}</label>
+        <button [disabled]="registerForm.invalid || registerForm.value.password != registerForm.value.confirmPassword"  (click)="registerHandler()" class="btn-submit">
+            Sign up
+        </button>
         <label class="has-account">Have an account? <span (click)="redirectToLogin()">Log in</span></label>
     </div>
     

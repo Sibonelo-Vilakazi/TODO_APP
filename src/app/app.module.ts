@@ -10,7 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { TodoCardComponent } from './components/todo-card/todo-card.component';
 import {HttpClientModule } from '@angular/common/http';
 import { AddEditComponent } from './pages/add-edit/add-edit.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -17,5 +17,16 @@ body,html{
     height: 48px;
     width: 100%;
     border-radius: $border-radius12;
+    outline: none;
+
+    border: none;
     cursor: pointer;
+}
+
+.errorMessage{
+    color: red
+}
+
+button:disabled{
+    background: #c1c1c1 !important;
 }

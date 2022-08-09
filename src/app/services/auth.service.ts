@@ -1,14 +1,19 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  constructor(private http : HttpClient) { }
+  constructor(private http: HttpClient) { }
+  
+  userLogin(data: any){
+    return this.http.post(`${environment.apiUrl}/Users/login`, data);
+  }
 
-  getUserData(filename : string){
-    return this.http.get(`assets/mock/${filename}.json`);
+  userRegister(data: any){
+    return this.http.post(`${environment.apiUrl}/Users/register`, data);
   }
 }
