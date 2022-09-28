@@ -8,7 +8,7 @@ import { environment } from 'src/environments/environment';
 export class AuthService {
 
   constructor(private http: HttpClient) { }
-  
+  public tokenName: string = 'token';
   userLogin(data: any){
     return this.http.post(`${environment.apiUrl}/Users/login`, data);
   }

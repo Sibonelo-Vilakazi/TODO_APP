@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
   loginSubmit(){
     this.errorMessage = '';
     this.authService.userLogin(this.loginForm.value).subscribe((res: any) =>{
-      console.log("Result :",res);
+      localStorage.setItem(this.authService.tokenName, res.token);
       this.router.navigateByUrl('');
     }, (error: any) =>{
         this.errorMessage = error.error;
