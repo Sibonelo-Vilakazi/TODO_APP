@@ -12,6 +12,7 @@ import {HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AddEditComponent } from './pages/add-edit/add-edit.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthInterceptor } from './helper/auth.interceptor';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { AuthInterceptor } from './helper/auth.interceptor';
     provide : HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true
-  }],
+  }, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

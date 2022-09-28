@@ -16,4 +16,12 @@ export class AuthService {
   userRegister(data: any){
     return this.http.post(`${environment.apiUrl}/Users/register`, data);
   }
+
+  isLoggedIn(){
+    return localStorage.getItem(this.tokenName) != null;
+  }
+
+  logout(){
+    localStorage.removeItem(this.tokenName);
+  }
 }
